@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ordering Page</title>
+  <script>
+    function myFunc() {
+      alert("Your order has been placed successfully!");
+    }
+  </script>
+  <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        margin-bottom: 20px;
+    }
+
+    input[type="submit"] {
+        background-color: #000000;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #000000;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ordering Page</h1>
+  <form action="{{ url_for('ordering') }}" method="post">
+
+    <p>Price for one volume is Rs.200</p>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" required>
+
+    <label for="phno">Mobile No:</label>
+    <input type="text" id="phno" name="phno" required>
+    
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" required>
+
+    <label for="pincode">Pincode:</label>
+    <input type="text" id="pincode" name="pincode" required>
+
+
+    <label for="volumes">No of Volumes Ordering:</label>
+    <input type="number" id="volumes" name="volumes" min="1" required>
+
+
+    <label for="card">Credit Card No:</label>
+    <input type="text" id="card" name="card" required>
+    
+    <input type="submit" onclick="myFunc()" value="Place Order">
+
+  </form>
+</body>
+</html>

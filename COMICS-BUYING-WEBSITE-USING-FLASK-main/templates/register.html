@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Registration Form</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script>
+    function webName() {
+        document.getElementById("webname").innerHTML ="COMICKS READER";
+    }
+</script>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'poppins', sans-serif;
+    }
+    body {
+        background-color: #f8f9fa;
+    }
+    .navbar {
+        background: #343a40;
+    }
+    .navbar-brand {
+        color: #fff !important;
+    }
+    .navbar-nav .nav-link {
+        color: #fff !important;
+    }
+    .container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    .form-group label {
+        font-weight: bold;
+    }
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+    .btn-dark {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .bottom {
+        margin-top: 10px;
+        text-align: center;
+    }
+    .bottom a {
+        text-decoration: none;
+        color: #007bff;
+    }
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNav">
+                    <span class="navbar-toggle-icon"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <p id="webname" class="navbar-brand" onmousemove="webName()">COMICKS</p>
+            </div>
+            <div class="collapse navbar-collapse" id="myNav">
+                <ul class="nav navbar-nav">
+                    <li style="margin-left: 100px;"><a href="{{url_for('home')}}">Home</a></li>
+                    <li style="margin-left: 100px;"><a href="{{url_for('action')}}">Action</a></li>
+                    <li style="margin-left: 100px;"><a href="{{url_for('romance')}}">Romance</a></li>
+                    <li style="margin-left: 100px;"><a href="{{url_for('fantasy')}}">Fantasy</a></li>
+                    <li style="margin-left: 100px;"><a href="{{url_for('login')}}">Login</a></li>
+                    <li style="margin-left: 100px;"><a href="{{url_for('user')}}">User</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <h2>User Registration</h2>
+        <form action="{{ url_for('register') }}" method="post">
+            {% if mesage is defined and mesage %}
+                <div class="alert alert-warning">{{ mesage }}</div>
+            {% endif %}
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+            </div>    
+            <button type="submit" class="btn btn-dark">Register</button>
+            <p class="bottom">Already have an account? <a href="{{url_for('login')}}">Login here</a></p>
+        </form>
+    </div>        
+</body>
+</html>

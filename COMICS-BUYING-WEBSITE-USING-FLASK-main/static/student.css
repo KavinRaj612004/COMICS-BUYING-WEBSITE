@@ -1,0 +1,121 @@
+
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-image: url('/static/img/black.jpg');
+    color: #f7f4f4;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  label {
+    font-weight: bold;
+    display: inline-block;
+    width: 25%;
+    margin-left: 27%;
+    margin-top: 40px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  select {
+    width: 25%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #0c0c0c;
+    margin-left: -10%;
+  }
+  
+  input[type="submit"] {
+    width: auto;
+    padding: 10px 20px;
+    background-color: #ffd903;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #000000;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 5px;
+  }
+  
+  input[type="submit"] {
+    width: auto;
+    padding: 10px 20px;
+    background-color: #ffd903;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin-top: 70px;
+    margin-left: 52%;
+  }
+  
+  
+  input[type="submit"]:hover {
+    background-color: #ffffff;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 5px;
+  }
+  /* Navigation bar styles */
+  nav {
+      background-color: #1b1a1a;
+      padding: 10px;
+      position: relative;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    
+    nav li {
+      float: left;
+    }
+    
+    nav li a {
+      display: block;
+      color: #ffd903;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    nav li a:hover {
+      background-color: #555;
+    }
+    
+    nav li a.active {
+      background-color: #ffd903;
+    }
+    
+    .login-button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #ffd903;
+      color: #000000;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    
+    .login-button:hover {
+      background-color: #ffffff;
+    }

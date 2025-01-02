@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>   
+    <title>Action</title>
+    <script>
+            function bigImg(x) {
+             
+              x.style.width = "285px";
+            }
+
+            function normalImg(x) {
+                x.style.width= "250px";
+            }
+            
+            function webName() {
+                document.getElementById("webname").innerHTML ="COMICKS READER";
+            }
+    </script>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'poppins', sans-serif;
+    }
+    .header{
+        min-height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('');
+        background-size: cover;
+        background-position: center;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 7%;
+    }
+    .title{
+        color: #333;
+        font-size: 25px;
+    }
+    .nav-links li{
+        list-style: none;
+        display: inline-block;
+        margin: 10px 30px;
+    }
+    .nav-links li a{
+        text-decoration: none;
+        color: #fff;
+    }
+    .container{
+        padding: 0 7%;
+    }
+    .header h1{
+        font-size: 4vw;
+        font-weight: 500;
+        color: #fff;
+        text-align: center;
+        padding-top: 15%;  
+    }
+    .sub-title{
+        margin: 50px 0px 20px;
+        font-size: 2.2vw;
+        font-weight: 500;
+        color: #333;
+    }
+    .footer{
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        grid-gap: 5px;
+        margin: 50px 0 5px;
+        text-align: center;
+    }
+    .footer img{
+        width: 3%;
+        border-radius: 5px;
+    }
+    .footer a{
+        text-decoration: none;
+        color: #999;
+        font-size: 22px;
+        margin: 0 10px;
+    }
+    .footer hr{
+        background: #999;
+        height: 1px;
+        margin: 20px 0px;
+    }
+    .footer p{
+        padding-bottom: 15px;
+    }
+    /*---------------------------- */
+    .navbar-white{
+        background: #fff;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+    }
+    .navbar-white .nav-links li a{
+        color: #000;
+    }
+    .navbar-white .register-btn{
+        background: #070707;
+        color: #fff;
+    }
+    /*-------------------------------- */
+    .list-container{
+        margin-top: 50px;
+        padding: 0 7%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .left-col{
+        flex-basis: 70%;
+    }
+    .right-col{
+        flex-basis: 25%;
+    }
+    .left-col h1{
+        color: #333;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+    .comic{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 30px 0;
+        border-top: 1px solid #ccc;
+    }
+    .comic-img{
+        flex-basis: 40%;
+    }
+    .comic-info{
+        flex-basis: 58%;
+        color: #555;
+    }
+    .comic-img img{
+        width: 100%;
+        border-radius: 12px;
+    }
+    .comic-info h2{
+        font-weight: 600;
+        color: #333;
+        font-size: 22px;
+        margin: 4px 0;
+    }
+    .comic-btn{
+        background: rgb(12, 12, 12);
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 20px;
+        text-decoration: none;
+        font-size: 14px;
+        margin-left: 100px;
+    } 
+</style>
+</head>
+<body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNav">
+                        <span class="navbar-toggle-icon"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                    </button>
+                    <p id="webname" class="navbar-brand" onmousemove="webName()">COMICKS</p>
+                </div>
+                <div class="collapse navbar-collapse" id="myNav">
+                <ul class="nav navbar-nav">
+                    <li style="margin-left: 100px;"><a href="{{url_for('home')}}">Home</a></li>
+                    <li style="margin-left: 100px;"><a href="{{url_for('action')}}">Action</a></li>
+                    <li style="margin-left: 100px;"><a href="{{url_for('romance')}}">Romance</a></li>
+                    <li style="margin-left: 100px;"><a href="{{url_for('fantasy')}}">Fanatsy</a></li>
+                    <li style="margin-left: 100px;"><a href="{{url_for('login')}}">Login</a></li>
+                    <li style="margin-left: 100px;"><a href="{{url_for('user')}}">User</a></li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="list-container">
+                <div class="left-col">
+                    <h2>Action</h2>
+                    <div class="comic">
+                        <div class="comic-img">
+                            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="{{url_for('static', filename='/Image/sololeveling.jpeg')}}">
+                        </div>
+                        <div class="comic-info">
+                            <h2>Solo leveling</h2>
+                            <p><br/>In a world where awakened beings called “Hunters” must battle deadly monsters to protect humanity, Sung Jinwoo, nicknamed “the weakest hunter of all mankind,” finds himself in a constant struggle for survival. One day, after a brutal encounter in an overpowered dungeon wipes out his party and threatens to end his life, a mysterious System chooses him as its sole player: Jinwoo has been granted the rare opportunity to level up his abilities, possibly beyond any known limits. Follow Jinwoo’s journey as he takes on ever-stronger enemies, both human and monster, to discover the secrets deep within the dungeons and the ultimate extent of his powers.
+                            </p>
+                            <br/><a href="{{url_for('ordering')}}" class="comic-btn">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="comic">
+                        <div class="comic-img">
+                            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="{{url_for('static', filename='/Image/I am not that kind of talent.webp')}}">
+                        </div>
+                        <div class="comic-info">
+                            <h2>I'm not that kind of talent</h2>
+                            <p><br/>I’m not that kind of person. I, Deon Hart, am a sickly person who vomits blood whenever I’m stressed. However, at the same time, I’m Demon Arut, who has somehow been misunderstood and thought of as a strong person, and thereby feared by everyone.
+                            </p>
+                            <br/><a href="{{url_for('ordering')}}" class="comic-btn">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="comic">
+                        <div class="comic-img">
+                            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="{{url_for('static', filename='/Image/return of the mount hua sect.jpg')}}">
+                        </div>
+                        <div class="comic-info">
+                            <h2>Return of the mount hua sect</h2>
+                            <p><br/>Cheong Myeong, The 13th Disciple of the Mount Hua Sect, One of the 3 Great Swordsmen, Plum Blossom Sword Saint, defeated Chun Ma, who has brought destruction and disarray onto the world. After the battle, he breathes his last breath on top of the headquarter mountain of the Heavenly Demon Sect. He is reborn after 100 years in the body of a child. ……What? The Mount Hua Sect has fallen? What kind of nonsense is that!?
+                            </p>
+                            <br/><a href="{{url_for('ordering')}}" class="comic-btn">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="comic">
+                        <div class="comic-img">
+                            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="{{url_for('static', filename='/Image/doombreaker1.webp')}}">
+                        </div>
+                        <div class="comic-info">
+                            <h2>Doom breaker</h2>
+                            <p><br/>Zephyr is the last human fighting evil in a world abandoned by the gods. When he is killed in battle by Tartarus, the god of destruction, all hope for humanity seems lost. But Zephyr’s fate is not sealed -- the gods who find his battles entertaining have gifted him a second chance at life, as he is sent ten years into the past, back to when he was a slave instead of the most powerful human alive. Can Zephyr get his revenge against Tartarus and save the woman he loves, or is he doomed to repeat the past?
+                            </p>
+                            <br/><a href="{{url_for('ordering')}}" class="comic-btn">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="comic">
+                        <div class="comic-img">
+                            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="{{url_for('static', filename='/Image/tokyo ghoul.jpg')}}">
+                        </div>
+                        <div class="comic-info">
+                            <h2>Tokyo ghoul</h2>
+                            <p><br/>Shy Ken Kaneki is thrilled to go on a date with the beautiful Rize. But it turns out that she’s only interested in his body—eating it, that is. When a morally questionable rescue transforms him into the first half-human half-Ghoul hybrid, Ken is drawn into the dark and violent world of Ghouls, which exists alongside our own.
+                            </p>
+                            <br/><a href="{{url_for('ordering')}}" class="comic-btn">Order Now</a>
+                        </div>
+                    </div>
+            <div class="footer">
+                <hr>
+                <p>Copyright @ 2023, COMICKS</p>
+            </div>
+        </div>
+    </body>
+    </html>

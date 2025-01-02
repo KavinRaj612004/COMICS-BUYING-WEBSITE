@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>   
+    <title>Fantasy</title>
+    <script>
+            function bigImg(x) {
+             
+              x.style.width = "285px";
+            }
+
+            function normalImg(x) {
+                x.style.width= "250px";
+            }
+            
+            function webName() {
+                document.getElementById("webname").innerHTML ="COMICKS READER";
+            }
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        }
+        .header{
+            min-height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('');
+            background-size: cover;
+            background-position: center;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 7%;
+        }
+        .title{
+            color: #333;
+            font-size: 25px;
+        }
+        .nav-links li{
+            list-style: none;
+            display: inline-block;
+            margin: 10px 30px;
+        }
+        .nav-links li a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .container{
+            padding: 0 7%;
+        }
+        .header h1{
+            font-size: 4vw;
+            font-weight: 500;
+            color: #fff;
+            text-align: center;
+            padding-top: 15%;  
+        }
+        .sub-title{
+            margin: 50px 0px 20px;
+            font-size: 2.2vw;
+            font-weight: 500;
+            color: #333;
+        }
+        .footer{
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-gap: 5px;
+            margin: 50px 0 5px;
+            text-align: center;
+        }
+        .footer img{
+            width: 3%;
+            border-radius: 5px;
+        }
+        .footer a{
+            text-decoration: none;
+            color: #999;
+            font-size: 22px;
+            margin: 0 10px;
+        }
+        .footer hr{
+            background: #999;
+            height: 1px;
+            margin: 20px 0px;
+        }
+        .footer p{
+            padding-bottom: 15px;
+        }
+        /*---------------------------- */
+        .navbar-white{
+            background: #fff;
+            box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+        }
+        .navbar-white .nav-links li a{
+            color: #000;
+        }
+        .navbar-white .register-btn{
+            background: #070707;
+            color: #fff;
+        }
+        /*-------------------------------- */
+        .list-container{
+            margin-top: 50px;
+            padding: 0 7%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .left-col{
+            flex-basis: 70%;
+        }
+        .right-col{
+            flex-basis: 25%;
+        }
+        .left-col h1{
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        .comic{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 30px 0;
+            border-top: 1px solid #ccc;
+        }
+        .comic-img{
+            flex-basis: 40%;
+        }
+        .comic-info{
+            flex-basis: 58%;
+            color: #555;
+        }
+        .comic-img img{
+            width: 100%;
+            border-radius: 12px;
+        }
+        .comic-info h2{
+            font-weight: 600;
+            color: #333;
+            font-size: 22px;
+            margin: 4px 0;
+        }
+        .comic-btn{
+            background: rgb(12, 12, 12);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            margin-left: 100px;
+        } 
+    </style>
+</head>
+<body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNav">
+                        <span class="navbar-toggle-icon"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                    </button>
+                    <p id="webname" class="navbar-brand" onmousemove="webName()">COMICKS</p>
+                </div>
+                <div class="collapse navbar-collapse" id="myNav">
+                <ul class="nav navbar-nav">
+                    <li style="margin-left: 100px;"><a href="{{url_for('home')}}">Home</a></li>
+                    <li style="margin-left: 100px;"><a href="{{url_for('action')}}">Action</a></li>
+                    <li style="margin-left: 100px;"><a href="{{url_for('romance')}}">Romance</a></li>
+                    <li style="margin-left: 100px;"><a href="{{url_for('fantasy')}}">Fanatsy</a></li>
+                    <li style="margin-left: 100px;"><a href="{{url_for('login')}}">Login</a></li>
+                    <li style="margin-left: 100px;"><a href="{{url_for('user')}}">User</a></li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="list-container">
+                <div class="left-col">
+                    <h2>Fantasy</h2>
+                    <div class="comic">
+                        <div class="comic-img">
+                            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="{{url_for('static', filename='/Image/the world after the fall.webp')}}">
+                        </div>
+                        <div class="comic-info">
+                            <h2>The world after the fall</h2>
+                            <p><br/>This is about a man who didn’t regress when everyone else returned back to the past.Humans were suddenly summoned to become “Walkers”, and they needed to clear the tower to save the world. . . Floor 77: The “Stone of Regression” was discovered. Walkers could now “return” to the past. Slowly, everyone left. . . Humanity’s last hope, “Carpe Diem”, was formed, made up of people who refused to abandon the world. . . The last Walker reached floor 100. He no longer knew what to believe.
+                            </p>
+                            <br/><a href="{{url_for('ordering')}}" class="comic-btn">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="comic">
+                        <div class="comic-img">
+                            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="{{url_for('static', filename='/Image/the greatest estate developer.webp')}}">
+                        </div>
+                        <div class="comic-info">
+                            <h2>The greatest estate developer</h2>
+                            <p><br/>When civil engineering student Suho Kim falls asleep reading a fantasy novel, he wakes up as a character in the book! Suho is now in the body of Lloyd Frontera, a lazy noble who loves to drink, and whose family is in a mountain of debt. Using his engineering knowledge, Suho designs inventions to avert the terrible future that lies in wait for him. With the help of a giant hamster, a knight, and the world’s magic, can Suho dig his new family out of debt and build a better future?
+                            </p>
+                            <br/><a href="{{url_for('ordering')}}" class="comic-btn">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="comic">
+                        <div class="comic-img">
+                            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="{{url_for('static', filename='/Image/dr.player.webp')}}">
+                        </div>
+                        <div class="comic-info">
+                            <h2>Dr.Player</h2>
+                            <p><br/>Raymond was the illegitimate son of the king. After being shamed and scorned, he ran away and became a healer… only to end up being ridiculed for getting an F rank. Then, one day, a miracle came upon him. [You have awakened as a player!] [Job: Surgeon (SSS-rank)] Raymond gained medical knowledge that had not existed in this world. The great legend of Raymond, the first surgeon, begins now!
+                            </p>
+                            <br/><a href="{{url_for('ordering')}}" class="comic-btn">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="comic">
+                        <div class="comic-img">
+                            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="{{url_for('static', filename='/Image/jack be invincible.jpeg')}}">
+                        </div>
+                        <div class="comic-info">
+                            <h2>Jack be invincible</h2>
+                            <p><br/>After getting revenge on the Thulcaan Empire, Jack Valantier took his last breath. But just when he thinks it's all over, he finds himself transported back to when he was 14! From his negligent and wicked family to his loyal servant and caring sister, it's all just as he had remembered. But this time, Jack is armed to the teeth with decades of experience from his previous life! He's ready to give them hell, and those that have wronged him will pay dearly. Because this time, he's invincible.
+                            </p>
+                            <br/><a href="{{url_for('ordering')}}" class="comic-btn">Order Now</a>
+                        </div>
+                    </div>
+                    <div class="comic">
+                        <div class="comic-img">
+                            <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="{{url_for('static', filename='/Image/infinite mage.webp')}}">
+                        </div>
+                        <div class="comic-info">
+                            <h2>Infinite mage</h2>
+                            <p><br/>Abandoned at birth in a stable, Shirone was raised by commoners. As a child, he had gifted Insight and had learned how to read. After visiting the city, he finally saw the workings of magic, which he was immensely curious about. This inspired Shirone’s dream of becoming a mage. However, the city was a place with a cruel and rigid social hierarchy. Here, Shirone discovered the hidden side of the world before he even reached adulthood… Will Shirone be able to achieve his dream of becoming a mage in this twisted world?
+                            </p>
+                            <br/><a href="{{url_for('ordering')}}" class="comic-btn">Order Now</a>
+                        </div>
+                    </div>
+            <div class="footer">
+                <hr>
+                <p>Copyright @ 2023, COMICKS</p>
+            </div>
+        </div>
+    </body>
+    </html>

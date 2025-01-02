@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>   
+    <title>Home</title>
+    <script>
+            function bigImg(x) {
+              x.style.width = "285px";
+            }
+
+            function normalImg(x) {
+                x.style.width= "250px";
+            }
+            
+            function webName() {
+                document.getElementById("webname").innerHTML ="COMICKS READER";
+            }
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+        }
+        .header{
+            
+            width: 100%;
+            background-image: none;
+            background-size: cover;
+            background-position: center;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 7%;
+        }
+        .title{
+            color: #0b0b0b;
+            font-size: 25px;
+        }
+        .nav-links li{
+            list-style: none;
+            display: inline-block;
+            margin: 10px 30px;
+        }
+        .nav-links li a{
+            text-decoration: none;
+            color: #040404;
+        }
+        .register-btn{
+            background: #090909;
+            color: #fdfbfb;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .container{
+            padding: 0 7%;
+        }
+        .sub-title{
+            margin: 50px 0px 20px;
+            font-size: 2.2vw;
+            font-weight: 500;
+            color: #0e0d0d;
+        }
+        .popular{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 30px;
+        }
+        .popular div img{
+            min-height: 100%;
+            width: 100%;
+            border-radius: 15px;
+        }
+        .aboutus{
+            text-align: center;
+            margin: 80px 0;
+            color: #333;
+            font-size: 17px;
+        }
+        .aboutus h2{
+            font-size: 28px;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        .footer{
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-gap: 5px;
+            margin: 50px 0 5px;
+            text-align: center;
+        }
+        .footer img{
+            width: 3%;
+            border-radius: 5px;
+        }
+        .footer a{
+            text-decoration: none;
+            color: #999;
+            font-size: 22px;
+            margin: 0 10px;
+        }
+        .footer hr{
+            background: #999;
+            height: 1px;
+            margin: 20px 0px;
+        }
+        .footer p{
+            padding-bottom: 15px;
+        }
+        .contact{
+            text-align: center;
+            margin: 80px 0;
+            color: #333;
+            font-size: 17px;
+        }
+        .contact h2{
+            font-size: 28px;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNav">
+                        <span class="navbar-toggle-icon"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                    </button>
+                    <p id="webname" class="navbar-brand" onmousemove="webName()">COMICKS</p>
+                </div>
+                <div class="collapse navbar-collapse" id="myNav">
+                <ul class="nav navbar-nav">
+                    <li style="margin-left: 100px;"><a href="{{url_for('home')}}">Home</a></li>
+                    <li style="margin-left: 100px;"><a href="{{url_for('action')}}">Action</a></li>
+                    <li style="margin-left: 100px;"><a href="{{url_for('romance')}}">Romance</a></li>
+                    <li style="margin-left: 100px;"><a href="{{url_for('fantasy')}}">Fanatsy</a></li>
+                    <li style="margin-left: 100px;"><a href="{{url_for('login')}}">Login</a></li>
+                    <li style="margin-left: 100px;"><a href="{{url_for('user')}}">User</a></li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <h2 class="sub-title">Popular Series</h2>
+            <div class="popular">
+                <div>
+                    <a href="{{url_for('ordering')}}"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="{{url_for('static', filename='/Image/sololeveling.jpeg')}}" alt=""></a>
+                    <span>
+                        <p>Solo leveling</p>
+                    </span>
+                </div>
+                <div>
+                    <a href="{{url_for('ordering')}}"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="{{url_for('static', filename='/Image/I am not that kind of talent.webp')}}" alt=""></a>
+                    <span>
+                        <p>I'm not that kind of talent</p>
+                    </span>
+                </div>
+                <div>
+                    <a href="{{url_for('ordering')}}"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="{{url_for('static', filename='/Image/return of the mount hua sect.jpg')}}" alt=""></a>
+                    <span>
+                        <p>Return of the mount hua sect</p>
+                    </span>
+                </div>
+                <div>
+                    <a href="{{url_for('ordering')}}"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="{{url_for('static', filename='/Image/doombreaker1.webp')}}" alt=""></a>
+                    <span>
+                        <p>Doom breaker<p>
+                    </span>
+                </div>
+                <div>
+                    <a href="{{url_for('ordering')}}"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="{{url_for('static', filename='/Image/the greatest estate developer.webp')}}" alt=""></a>
+                    <span>
+                        <p>The greatest estate developer</p>
+                    </span>
+                </div>
+                <div>
+                    <a href="{{url_for('ordering')}}"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="{{url_for('static', filename='/Image/the world after the fall.webp')}}" alt=""></a>
+                    <span>
+                        <p>The world after the fall</p>
+                    </span>
+                </div>
+                <div>
+                    <a href="{{url_for('ordering')}}"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="{{url_for('static', filename='/Image/dr.player.webp')}}" alt=""></a>
+                    <span>
+                        <p>Dr.Player</p>
+                    </span>
+                </div>
+                <div>
+                    <a href="{{url_for('ordering')}}"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="{{url_for('static', filename='/Image/who made me a princess.jpg')}}" alt=""></a>
+                    <span>
+                        <p>Who made me a princess</p>
+                    </span>
+                </div>
+                <div>
+                    <a href="{{url_for('ordering')}}"><img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="{{url_for('static', filename='/Image/horimiya3.jpg')}}" alt=""></a>
+                    <span>
+                        <p>Horimiya</p>
+                    </span>
+                </div>
+            </div>
+            <div class="aboutus">
+                <h2>About us</h2>
+                <p>We are a platform that publishes many webtoons with their official translation.
+                    Our goal is to publish famous webtoon series with their authors' support. We have webtoons of all available genres.
+                    So please read your favourite webtoons at our site legally and support the authors.              </p>
+            </div>
+            <div class="contact">
+                <h2>Contact</h2>
+                <p>For clearing any queries and problems you face at our website please contact us through comicks26@gmail.com</p>
+            </div>
+            <div class="footer">
+                <a href="https://www.facebook.com/haribalaji.haribal83"><img src="{{url_for('static', filename='/Image/facebook.svg')}}"></a>
+                <a href="https://twitter.com/hari2148m"><img src="{{url_for('static', filename='/Image/twitter.svg')}}"></a>
+                <a href="https://www.instagram.com/hari2148m/"><img src="{{url_for('static', filename='/Image/instagram.svg')}}"></a>
+                <hr>
+                <p>Copyright @ 2023, COMICKS</p>
+            </div>
+</body>
+</html>
